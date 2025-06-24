@@ -16,7 +16,7 @@ import com.icwd.hotel.service.HotelService.entities.Hotel;
 import com.icwd.hotel.service.HotelService.services.HotelService;
 
 @RestController
-@RequestMapping("/hotels1")
+@RequestMapping("/hotels")
 public class HotelController {
 
 	@Autowired
@@ -44,7 +44,7 @@ public class HotelController {
 	
 	// Get hotel By Id
 	@GetMapping("/getHotel/{id}")
-	public ResponseEntity<Hotel> createHotel(@PathVariable int id){
+	public ResponseEntity<Hotel> getHotelById(@PathVariable int id){
 		
 		Hotel getHotel = hotelService.getHotelById(id);
 		
