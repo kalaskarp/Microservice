@@ -37,6 +37,7 @@ public class RatingController {
 	public ResponseEntity<List<Rating>> getRatings(){
 		
 		List<Rating> getRating = ratingService.getAllRating();
+		System.out.println(getRating);
 		
 		return new ResponseEntity<List<Rating>>(getRating,HttpStatus.OK);
 		
