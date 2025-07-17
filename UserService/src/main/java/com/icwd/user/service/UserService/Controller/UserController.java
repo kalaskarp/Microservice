@@ -35,7 +35,7 @@ public class UserController {
 	}
 
 	// get user by ID
-	@CircuitBreaker(name = "sampleService", fallbackMethod = "fallbackResponse")
+	@CircuitBreaker(name = "getSingleUser", fallbackMethod = "fallbackResponse")
 	@Retry(name = "sampleService", fallbackMethod = "fallbackResponse")
 	@GetMapping("/getUser/{userId}")
 	public ResponseEntity<User> getSingleUser(@PathVariable("userId") Integer userId) {

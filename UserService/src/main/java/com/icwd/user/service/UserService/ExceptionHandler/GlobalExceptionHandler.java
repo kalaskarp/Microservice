@@ -11,7 +11,7 @@ import com.icwd.user.service.UserService.payload.ApiResponce;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(ResourceNotFoundException.class)
-	public ResponseEntity<ApiResponce> handlerResourceNotFoundException(ResourceNotFoundException ex){
+	public ResponseEntity<?> handlerResourceNotFoundException(ResourceNotFoundException ex){
 		
 		String message = ex.getMessage();
 		ApiResponce apiResponce = ApiResponce.builder().message(message).success(true).status(HttpStatus.NOT_FOUND).build();
