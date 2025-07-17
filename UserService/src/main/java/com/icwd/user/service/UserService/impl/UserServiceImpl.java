@@ -49,7 +49,21 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getAllUser() {
 
-		return userRepo.findAll();
+		List<Hotel> allHotel = hotelService.getAllHotel();
+		List<Rating> ratingList = ratingsService.getAllRatings();
+		List<User> all = userRepo.findAll();
+
+//		for (User user : all) {
+//
+//			user.setRetings(ratingList);
+//		}
+//		
+//		for (User user : all) {
+//
+//			user.setHotels(allHotel);
+//		}
+
+		return all;
 	}
 
 	@Override

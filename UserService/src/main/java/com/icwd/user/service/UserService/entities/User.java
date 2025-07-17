@@ -25,4 +25,6 @@ public class User {
 	
 	@Transient
 	private List<Rating> retings; 
+	@Transient
+	private List<Hotel> hotels; 
 }
